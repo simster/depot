@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Pragprog Books Online Store</title>
+	<%= stylesheet_link_tag "scaffold" %>
+	<%= stylesheet_link_tag "application", :media => "all" %>
+	<%= javascript_include_tag :defaults %>
+	<%= csrf_meta_tag %>
+</head>
+
+<body id="store" >
+	<div id="banner" >
+		<%= image_tag("logo.png") %>
+		<%= @page_title || "Pragmatic Bookshelf" %>
+	</div>
+	<div id="columns" >
+		<div id="side" >
+			<a href="http://blooming-sierra-7677.herokuapp.com" >Home</a><br />
+			<a href="http://blooming-sierra-7677.herokuapp.com/faq" >Questions</a><br />
+			<a href="http://blooming-sierra-7677.herokuapp.com/news" >News</a><br />
+			<a href="http://blooming-sierra-7677.herokuapp.com/contact" >Contact</a><br />
+		</div>
+	<div id="main" >
+		<%= yield %>
+	</div>
+</div>
+</body>
+</html>
